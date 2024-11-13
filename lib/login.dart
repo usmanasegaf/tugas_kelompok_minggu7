@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tugas_kelompok_minggu7/mainpage.dart';
 
 final userNameController = TextEditingController();
+final passwordController = TextEditingController();
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -27,7 +28,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Aplikasi Biodata',
+                    'Aplikasi Kelompok 5',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
@@ -35,9 +36,20 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TextField(
-                        decoration: InputDecoration(labelText: 'Username'),
-                        controller: userNameController,
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          decoration: InputDecoration(labelText: 'Username'),
+                          controller: userNameController,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(labelText: 'Password'),
+                          controller: passwordController,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
@@ -45,12 +57,38 @@ class LoginPage extends StatelessWidget {
                             onPressed: () {
                               print(userNameController.text);
                               if (userNameController.text ==
-                                  "Mohammad Usman Asegaf") {
+                                      "Mohammad Usman Asegaf" &&
+                                  passwordController.text == "21552011174") {
                                 Navigator.pushReplacement(context,
                                     MaterialPageRoute(builder: (context) {
                                   return const MainPage();
                                 }));
-                              } else if (userNameController.text == "") {
+                              } else if (userNameController.text == "2" &&
+                                  passwordController.text == "222") {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return const MainPage();
+                                }));
+                              } else if (userNameController.text == "3" &&
+                                  passwordController.text == "333") {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return const MainPage();
+                                }));
+                              } else if (userNameController.text == "4" &&
+                                  passwordController.text == "444") {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return const MainPage();
+                                }));
+                              } else if (userNameController.text == "5" &&
+                                  passwordController.text == "555") {
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return const MainPage();
+                                }));
+                              } else if (userNameController.text == "6" &&
+                                  passwordController.text == "666") {
                                 Fluttertoast.showToast(
                                     msg: "Username Tidak Boleh Kosong",
                                     toastLength: Toast.LENGTH_SHORT,
