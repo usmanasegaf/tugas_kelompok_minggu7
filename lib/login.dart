@@ -14,13 +14,6 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          SvgPicture.asset(
-            'assets/background_1.svg',
-            alignment: Alignment.bottomCenter,
-            width: 2560.0,
-            height: 1440.0,
-            fit: BoxFit.scaleDown,
-          ),
           Center(
             child: Padding(
               padding: const EdgeInsets.all(32.0),
@@ -39,7 +32,8 @@ class LoginPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextField(
-                          decoration: InputDecoration(labelText: 'Username'),
+                          decoration:
+                              const InputDecoration(labelText: 'Username'),
                           controller: userNameController,
                         ),
                       ),
@@ -47,7 +41,8 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: TextField(
                           obscureText: true,
-                          decoration: InputDecoration(labelText: 'Password'),
+                          decoration:
+                              const InputDecoration(labelText: 'Password'),
                           controller: passwordController,
                         ),
                       ),
@@ -87,10 +82,11 @@ class LoginPage extends StatelessWidget {
                                     MaterialPageRoute(builder: (context) {
                                   return const MainPage();
                                 }));
-                              } else if (userNameController.text == "6" &&
-                                  passwordController.text == "666") {
+                              } else if (userNameController.text == "" ||
+                                  passwordController.text == "") {
                                 Fluttertoast.showToast(
-                                    msg: "Username Tidak Boleh Kosong",
+                                    msg:
+                                        "Username / Password Tidak Boleh Kosong",
                                     toastLength: Toast.LENGTH_SHORT,
                                     gravity: ToastGravity.CENTER,
                                     timeInSecForIosWeb: 2,
