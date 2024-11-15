@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tugas_kelompok_minggu7/main.dart';
+
+//By Mohammad Usman Asegaf
 
 final userNameController = TextEditingController();
 final passwordController = TextEditingController();
@@ -21,7 +22,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Aplikasi Kelompok 5',
+                    'Aplikasi Biodata Dan Log',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
